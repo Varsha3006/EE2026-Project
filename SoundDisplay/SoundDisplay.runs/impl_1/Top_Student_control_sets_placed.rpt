@@ -1,0 +1,99 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Apr  4 13:28:49 2020
+| Host         : LAPTOP-96MNJNBA running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
+| Design       : Top_Student
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    30 |
+| Unused register locations in slices containing registers |    62 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|      4 |            1 |
+|      8 |            3 |
+|     12 |            4 |
+|     14 |            7 |
+|    16+ |           14 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             248 |           51 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             178 |           27 |
+| Yes          | No                    | No                     |             134 |           22 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             266 |           38 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------+-------------------------------------------+-----------------------------------+------------------+----------------+
+|      Clock Signal      |               Enable Signal               |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++------------------------+-------------------------------------------+-----------------------------------+------------------+----------------+
+| ~my_clk2_BUFG          |                                           |                                   |                1 |              2 |
+|  clk381hz/CLK          |                                           |                                   |                1 |              4 |
+|  CLOCK_IBUF_BUFG       | sw1_IBUF                                  | improve1/display/anode[3]_i_1_n_0 |                2 |              8 |
+|  freq2_BUFG            | peak/led[1]_i_1_n_0                       | peak/data0                        |                2 |              8 |
+|  clk381hz/CLK          | sw0_IBUF                                  | panel/an[3]_i_1_n_0               |                1 |              8 |
+|  CLOCK_IBUF_BUFG       | improve1/Hour[5]_i_2_n_0                  | improve1/Hour[5]_i_1_n_0          |                3 |             12 |
+|  CLOCK_IBUF_BUFG       | improve1/Seconds                          | improve1/Seconds[5]_i_1_n_0       |                2 |             12 |
+|  CLOCK_IBUF_BUFG       | improve1/Mins[5]_i_1_n_0                  |                                   |                4 |             12 |
+|  CLOCK_IBUF_BUFG       | improve1/an0[3]_i_1_n_0                   | improve1/an2[3]_i_1_n_0           |                1 |             12 |
+|  CLOCK_IBUF_BUFG       | improve1/display/led_output[1][6]_i_1_n_0 |                                   |                2 |             14 |
+|  CLOCK_IBUF_BUFG       | improve1/display/led_output[2][6]_i_1_n_0 |                                   |                1 |             14 |
+|  CLOCK_IBUF_BUFG       | improve1/display/led_output[0][6]_i_1_n_0 |                                   |                3 |             14 |
+|  CLOCK_IBUF_BUFG       | improve1/display/led_output[3][6]_i_1_n_0 |                                   |                3 |             14 |
+|  CLOCK_IBUF_BUFG       | improve1/an0[3]_i_1_n_0                   |                                   |                1 |             14 |
+|  CLOCK_IBUF_BUFG       | sw1_IBUF                                  |                                   |                3 |             14 |
+|  clk381hz/CLK          | sw0_IBUF                                  |                                   |                2 |             14 |
+|  my_clk2_BUFG          |                                           |                                   |                4 |             18 |
+|  CLOCK_IBUF_BUFG       |                                           | clk20Khz/CLK                      |                3 |             24 |
+|  freq2_BUFG            | peak/stored_MIC_peak[11]_i_1_n_0          |                                   |                3 |             24 |
+| ~dev1/J_MIC3_Pin4_OBUF |                                           |                                   |                6 |             24 |
+|  clk20Khz/CLK          |                                           |                                   |                3 |             24 |
+|  CLOCK_IBUF_BUFG       |                                           | clk20Khz/count[15]_i_1_n_0        |                4 |             30 |
+| ~my_clk2_BUFG          |                                           | reset/dff_one/sp_out              |                5 |             34 |
+|  CLOCK_IBUF_BUFG       | sw1_IBUF                                  | improve1/display/counter          |                5 |             38 |
+| ~my_clk2_BUFG          | test/delay[0]_i_1_n_0                     | reset/dff_one/sp_out              |                5 |             40 |
+|  CLOCK_IBUF_BUFG       | improve1/an0[3]_i_1_n_0                   | improve1/counter                  |                8 |             64 |
+| ~my_clk2_BUFG          | test/state                                | reset/dff_one/sp_out              |                9 |             64 |
+|  freq2_BUFG            |                                           |                                   |               17 |             80 |
+| ~my_clk2_BUFG          |                                           | test/spi_word[39]_i_1_n_0         |               15 |             90 |
+|  CLOCK_IBUF_BUFG       |                                           |                                   |               19 |             96 |
++------------------------+-------------------------------------------+-----------------------------------+------------------+----------------+
+
+
